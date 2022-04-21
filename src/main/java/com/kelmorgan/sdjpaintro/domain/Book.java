@@ -13,14 +13,14 @@ import java.util.Objects;
 @Entity
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
     private String isbn;
     private String publisher;
 
-   private Long authorId;
+    private Long authorId;
 
     public Book(String title, String isbn, String publisher, Long authorId) {
         this.title = title;
